@@ -1,0 +1,33 @@
+<h2>Listing vinculaciones</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Descripcion</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for vinculacion <- @vinculaciones do %>
+    <tr>
+      <td><img src="<%= Prueba.ImageUploader.url({vinculacion.image, vinculacion})%>" width="200" height="200"></td>
+      <td>
+      <p><%= for text <- showText(vinculacion) do %>
+      <%=text%> <br>
+      <% end %>
+      </p>
+    </td>
+
+      <td class="text-right">
+        <%= link "Show", to: vinculacion_path(@conn, :show, vinculacion), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: vinculacion_path(@conn, :edit, vinculacion), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: vinculacion_path(@conn, :delete, vinculacion), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New vinculacion", to: vinculacion_path(@conn, :new) %>

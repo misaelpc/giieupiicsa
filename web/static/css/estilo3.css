@@ -1,0 +1,21 @@
+.contenedor{
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align : justify;
+	text-indent: 50px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	font-size: 1em;
+}
+.encabezado{
+	/*border: 1px solid #A9BCF5;*/
+	margin-top: 2px;
+}
+
+p{
+	text-align: justify;
+	font-size: 1.1em;
+ 	line-height: 1;
+ 	font-family:Arial, Helvetica, sans-serif;
+}
+

@@ -1,0 +1,86 @@
+
+<h2>Show investigador</h2>
+
+
+  <div class="row">
+    <div class="col align-self-center">
+      One of three columns
+    </div>
+  </div>
+
+<ul>
+
+  <li>
+    <strong>Nombre:</strong>
+    <%= @investigador.nombre %>
+  </li>
+
+  <li>
+    <strong>Ideomas:</strong>
+    <%= @investigador.ideomas %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <img src="<%= Prueba.ImageUploader.url({@investigador.image, @investigador})%>">
+  </li>
+
+  <li>
+    <strong>Semblaza:</strong>
+    <%= @investigador.semblaza %>
+  </li>
+
+  <li>
+    <strong>Nacionalidad:</strong>
+    <%= @investigador.nacionalidad %>
+  </li>
+
+  <li>
+    <strong>Edad:</strong>
+    <%= @investigador.edad %>
+  </li>
+
+  <li>
+    <strong>Correo:</strong>
+    <%= @investigador.correo %>
+  </li>
+
+  <li>
+    <strong>Academica:</strong>
+    <%= @investigador.academica %>
+  </li>
+
+  <li>
+    <strong>Actividad:</strong>
+    <%= @investigador.actividad %>
+  </li>
+
+  <li>
+    <strong>Experiencia:</strong>
+    <%= @investigador.experiencia %>
+  </li>
+
+  <li>
+    <strong>Conocimientos:</strong>
+    <%= @investigador.conocimientos %>
+  </li>
+
+  <li>
+    <strong>Proyectos:</strong>
+    <%= @investigador.proyectos %>
+  </li>
+
+  <li>
+    <strong>Participacion:</strong>
+    <%= @investigador.participacion %>
+  </li>
+
+  <li>
+    <strong>Contacto:</strong>
+    <%= @investigador.contacto %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: investigador_path(@conn, :edit, @investigador) %>
+<%= link "Back", to: investigador_path(@conn, :index) %>

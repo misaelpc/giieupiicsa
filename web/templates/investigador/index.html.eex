@@ -1,0 +1,52 @@
+<h2>Listing investigadores</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ideomas</th>
+      <th>Image</th>
+      <th>Semblaza</th>
+      <th>Nacionalidad</th>
+      <th>Edad</th>
+      <th>Correo</th>
+      <th>Academica</th>
+      <th>Actividad</th>
+      <th>Experiencia</th>
+      <th>Conocimientos</th>
+      <th>Proyectos</th>
+      <th>Participacion</th>
+      <th>Contacto</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for investigador <- @investigadores do %>
+    <tr>
+      <td><%= investigador.nombre %></td>
+      <td><%= investigador.ideomas %></td>
+      <td><img src="<%= Prueba.ImageUploader.url({investigador.image, investigador})%>"></td>
+      <td><%= investigador.semblaza %></td>
+      <td><%= investigador.nacionalidad %></td>
+      <td><%= investigador.edad %></td>
+      <td><%= investigador.correo %></td>
+      <td><%= investigador.academica %></td>
+      <td><%= investigador.actividad %></td>
+      <td><%= investigador.experiencia %></td>
+      <td><%= investigador.conocimientos %></td>
+      <td><%= investigador.proyectos %></td>
+      <td><%= investigador.participacion %></td>
+      <td><%= investigador.contacto %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: investigador_path(@conn, :show, investigador), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: investigador_path(@conn, :edit, investigador), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: investigador_path(@conn, :delete, investigador), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New investigador", to: investigador_path(@conn, :new) %>

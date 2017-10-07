@@ -1,0 +1,6 @@
+<h2>Edit vinculacion</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: vinculacion_path(@conn, :update, @vinculacion) %>
+
+<%= link "Back", to: vinculacion_path(@conn, :index) %>

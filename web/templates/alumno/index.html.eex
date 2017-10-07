@@ -1,0 +1,52 @@
+<h2>Listing alumnos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ideomas</th>
+      <th>Image</th>
+      <th>Semblaza</th>
+      <th>Nacionalidad</th>
+      <th>Edad</th>
+      <th>Correo</th>
+      <th>Academica</th>
+      <th>Actividad</th>
+      <th>Experiencia</th>
+      <th>Conocimientos</th>
+      <th>Proyectos</th>
+      <th>Participacion</th>
+      <th>Contacto</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for alumno <- @alumnos do %>
+    <tr>
+      <td><%= alumno.nombre %></td>
+      <td><%= alumno.ideomas %></td>
+      <td><img src="<%= Prueba.ImageUploader.url({alumno.image, alumno})%>" width="200" height="200"></td>
+      <td><%= alumno.semblaza %></td>
+      <td><%= alumno.nacionalidad %></td>
+      <td><%= alumno.edad %></td>
+      <td><%= alumno.correo %></td>
+      <td><%= alumno.academica %></td>
+      <td><%= alumno.actividad %></td>
+      <td><%= alumno.experiencia %></td>
+      <td><%= alumno.conocimientos %></td>
+      <td><%= alumno.proyectos %></td>
+      <td><%= alumno.participacion %></td>
+      <td><%= alumno.contacto %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: alumno_path(@conn, :show, alumno), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: alumno_path(@conn, :edit, alumno), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: alumno_path(@conn, :delete, alumno), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New alumno", to: alumno_path(@conn, :new) %>

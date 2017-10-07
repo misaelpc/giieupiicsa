@@ -1,0 +1,18 @@
+<h2>Show vinculacion</h2>
+
+<ul>
+
+  <li>
+    <strong>Image:</strong>
+    <img src="../<%= Prueba.ImageUploader.url({@vinculacion.image, @vinculacion})%>" width="200" height="200">
+  </li>
+
+  <li>
+    <strong>Descripcion:</strong>
+    <%= @vinculacion.descripcion %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: vinculacion_path(@conn, :edit, @vinculacion) %>
+<%= link "Back", to: vinculacion_path(@conn, :index) %>

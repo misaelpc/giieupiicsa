@@ -1,0 +1,95 @@
+<%= form_for @changeset, @action,[multipart: true], fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :nombre, class: "control-label" %>
+    <%= text_input f, :nombre, class: "form-control" %>
+    <%= error_tag f, :nombre %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ideomas, class: "control-label" %>
+    <%= textarea f, :ideomas, class: "form-control" %>
+    <%= error_tag f, :ideomas %>
+  </div>
+
+  <div class="form-group">
+    <label>Image</label>
+    <%= file_input f, :image %>
+    <%= error_tag f, :image %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :semblaza, class: "control-label" %>
+    <%= textarea f, :semblaza, class: "form-control" %>
+    <%= error_tag f, :semblaza %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :nacionalidad, class: "control-label" %>
+    <%= text_input f, :nacionalidad, class: "form-control" %>
+    <%= error_tag f, :nacionalidad %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :edad, class: "control-label" %>
+    <%= text_input f, :edad, class: "form-control" %>
+    <%= error_tag f, :edad %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :correo, class: "control-label" %>
+    <%= text_input f, :correo, class: "form-control" %>
+    <%= error_tag f, :correo %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :academica, class: "control-label" %>
+    <%= textarea f, :academica, class: "form-control" %>
+    <%= error_tag f, :academica %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :actividad, class: "control-label" %>
+    <%= textarea f, :actividad, class: "form-control" %>
+    <%= error_tag f, :actividad %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :experiencia, class: "control-label" %>
+    <%= textarea f, :experiencia, class: "form-control" %>
+    <%= error_tag f, :experiencia %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :conocimientos, class: "control-label" %>
+    <%= textarea f, :conocimientos, class: "form-control" %>
+    <%= error_tag f, :conocimientos %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :proyectos, class: "control-label" %>
+    <%= textarea f, :proyectos, class: "form-control" %>
+    <%= error_tag f, :proyectos %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :participacion, class: "control-label" %>
+    <%= textarea f, :participacion, class: "form-control" %>
+    <%= error_tag f, :participacion %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :contacto, class: "control-label" %>
+    <%= textarea f, :contacto, class: "form-control" %>
+    <%= error_tag f, :contacto %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<p class="titulo">
+<%= @publicacion.titulo %>
+</p>
+
+<%= for parrafo <- parrafo(@publicacion) do %>
+<p class="parrafo">
+<%= parrafo %>
+</p>
+<% end %>
+<br>
+<a  href="<%= @publicacion.link %>" target="_blank"> <%= @publicacion.link %> </a>
+   
+<br>
+
+<%= link "Regresar", to: publicacion_path(@conn, :index) %>

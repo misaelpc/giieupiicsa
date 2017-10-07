@@ -1,0 +1,6 @@
+<h2>New investigador</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: investigador_path(@conn, :create) %>
+
+<%= link "Back", to: investigador_path(@conn, :index) %>

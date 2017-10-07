@@ -1,0 +1,88 @@
+<div class="container"><br><br><br></div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <img src="../<%= Prueba.ImageUploader.url({@alumno.image, @alumno})%>" width="200" height="200" class="rounded-circle" aling="middle">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-3">
+      <p><%= @alumno.nombre %></p>
+    </div>
+  </div>
+</div>
+
+
+<ul>
+
+  <li>
+    <strong>Nombre:</strong>
+    <%= @alumno.nombre %>
+  </li>
+
+  <li>
+    <strong>Ideomas:</strong>
+    <p><%= for language <- languages(@alumno) do %>
+      <%=language%> <br>
+      <% end %>
+    </p>
+  </li>
+  <li>
+    <strong>Semblaza:</strong>
+    <%= @alumno.semblaza %>
+  </li>
+
+  <li>
+    <strong>Nacionalidad:</strong>
+    <%= @alumno.nacionalidad %>
+  </li>
+
+  <li>
+    <strong>Edad:</strong>
+    <%= @alumno.edad %>
+  </li>
+
+  <li>
+    <strong>Correo:</strong>
+    <%= @alumno.correo %>
+  </li>
+
+  <li>
+    <strong>Academica:</strong>
+    <%= @alumno.academica %>
+  </li>
+
+  <li>
+    <strong>Actividad:</strong>
+    <%= @alumno.actividad %>
+  </li>
+
+  <li>
+    <strong>Experiencia:</strong>
+    <%= @alumno.experiencia %>
+  </li>
+
+  <li>
+    <strong>Conocimientos:</strong>
+    <%= @alumno.conocimientos %>
+  </li>
+
+  <li>
+    <strong>Proyectos:</strong>
+    <%= @alumno.proyectos %>
+  </li>
+
+  <li>
+    <strong>Participacion:</strong>
+    <%= @alumno.participacion %>
+  </li>
+
+  <li>
+    <strong>Contacto:</strong>
+    <%= @alumno.contacto %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: alumno_path(@conn, :edit, @alumno) %>
+<%= link "Back", to: alumno_path(@conn, :index) %>
