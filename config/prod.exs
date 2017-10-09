@@ -14,6 +14,7 @@ use Mix.Config
 config :prueba, Prueba.Endpoint,
   http: [port: {:system, "4000"}],
   url: [host: "127.0.0.1", port: 4000],
+  server: true,
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production

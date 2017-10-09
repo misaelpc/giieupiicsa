@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :prueba, Prueba.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "misaelpc",
+  username: "postgres",
   password: "",
   database: "prueba_dev",
   hostname: "localhost",
